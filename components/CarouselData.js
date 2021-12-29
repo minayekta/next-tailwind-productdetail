@@ -1,0 +1,22 @@
+export const CarouselData = [
+    {
+      image:
+        "/assets/images/1.jpeg",
+    },
+    {
+      image:
+        "/assets/images/2.jpeg",
+    },
+    {
+      image:
+        "/assets/images/3.jpeg",
+    },
+    {
+      image:
+        "/assets/images/4.jpeg",
+    },
+    {
+      image:
+        "/assets/images/5.jpeg",
+    },
+  ];
