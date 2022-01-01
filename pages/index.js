@@ -1,39 +1,30 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import TopNav from "../components/TopNav";
-import OwlCarousel from "react-owl-carousel2";
-import Carousel from './../components/Carousel';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import Footer from "../components/Footer";
 import SectionVideo from "../components/SectionVideo";
 import DetailProduct from "../components/DetailProduct";
 export default function Home() {
-  const options = {
-    items: 4,
-    loop: false,
-    margin: 10,
-    autoplay: false,
-    nav: true,
-    navText: [
-      "<span><i class='fa c-grayB font-60 fa-angle-left'></i></span>",
-      "<span><i class='fa c-grayB font-60 fa-angle-right'></i></span>",
-    ],
-    responsive: {
-      300: {
-        items: 1,
-      },
-      400: {
-        items: 1,
-      },
-      768: {
-        items: 2,
-      },
-      1000: {
-        items: 3,
-      },
-      1280: {
-        items: 4,
-      },
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 4
     },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 4
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
   };
   return (
     <div className="rtl">
@@ -44,7 +35,7 @@ export default function Home() {
           <div className="mt-5">
             <p className="mx-20 text-3xl  mb-4">پروفیل بر 2300 وات</p>
             <p className="mx-20 text-2xl">5901</p>
-            <span className="m-20 mt-4 block overflow-y-scroll overscroll-none max-h-md  px-6">
+            <span className="m-20 mt-4 block overflow-y-scroll h-80 overscroll-none   px-6">
               <p className=" mt-4 text-sm ">
                 اگر تا به حال در جریان یک پروژه‌ ساخت و ساز بوده‌ اید حتما می
                 ‌دانید که یکی از معمول ‌ترین فعالیت ‌ها در این نوع پروژه ‌ها،
@@ -189,11 +180,19 @@ export default function Home() {
         <div className="col-span-6">
           <img src="/assets/images/Modeling.jpeg" />
         </div>
-        <div className="owl-carousel bottom-0 left-0 absolute bg-grey w-full flex">
-      <Carousel/>
+        <div className="col-span-12">
+        <div style={{ position: "relative" }}>
+        <Carousel responsive={responsive}>
+          <div><img src="/assets/images/Modeling.jpeg"  width="30%"/></div>
+          <div><img src="/assets/images/Modeling.jpeg"  width="30%"/></div>
+          <div><img src="/assets/images/Modeling.jpeg"  width="30%"/></div>
+          <div><img src="/assets/images/Modeling.jpeg"  width="30%"/></div>
+          <div><img src="/assets/images/Modeling.jpeg"  width="30%"/></div>
+          
+        </Carousel>
       </div>
       </div>
-      
+      </div>
       <div className="grid grid-cols-12 text-right">
       <div className="col-span-6 bg-red-600 px-20 py-10">
       <p className="text-sm  text-white mb-3"> تضمین عملکرد عالی و دوام بالا با موتور 2300 واتی حرفه ‌ای -

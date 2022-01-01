@@ -3,7 +3,7 @@ const SectionVideo = () => {
     return (
         <div className="grid grid-cols-12">
             <div className="col-span-4 bg-[url('/assets/images/bk-img2.jpg')] bg-fixed bg-contain"></div>
-            <div className="col-span-8 flex justify-end p-4 bg-red-500">
+            <div className="col-span-8 relative flex justify-end p-4 bg-red-500">
             <div className='relative col-span-4 px-0 video-item overflow-hidden cursor-pointer' >
                 <img className='img-fluid all-transition' width="70%" src="/assets/images/video-cover.jpg"/>
                 <svg xmlns="http://www.w3.org/2000/svg" className="absolute left-20 bottom-14 translate-x-full translate-x-2/3 left-0 transition-all duration-500" width="50" height="50" viewBox="0 0 70 70">

@@ -2,7 +2,7 @@
 
 const Header = () => {
     return (
-        <div className="grid grid-cols-12 items-center  p-4 bg-white fixed h-auto left-0 right-0 top-0 text-right">
+        <div className="grid grid-cols-12 items-center  p-4 bg-white   left-0 right-0 top-0 text-right">
             <div className="col-span-6 px-0">
                 <img src="/assets/images/language.png"/>
             </div>
